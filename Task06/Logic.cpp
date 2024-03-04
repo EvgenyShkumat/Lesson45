@@ -30,9 +30,9 @@ int find_first_positive_element_index(int* vector, int length) {
 	return index;
 }
 
-int find_sum_after_positive_element(int* vector, int length, int index) {
+int find_sum_after_positive_element(int* vector, int length) {
 	int sum = 0;
-
+	int index = find_first_positive_element_index(vector, length);
 	for (int i = index + 1; i < length; i++)
 	{
 		sum += *(vector + i);

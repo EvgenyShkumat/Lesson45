@@ -13,7 +13,8 @@ int find_max_element_index(int* vector, int length) {
 	return max_index;
 }
 
-int find_negative_product_before_max(int* vector, int length, int max) {
+int find_negative_product_before_max(int* vector, int length) {
+	int max = find_max_element_index(vector, length);
 	int product = 1;
 
 	for (int i = 0; i < max; i++)
@@ -26,8 +27,9 @@ int find_negative_product_before_max(int* vector, int length, int max) {
 	return product;
 }
 
-int find_positive_sum_before_max(int* vector, int length, int max) {
+int find_positive_sum_before_max(int* vector, int length) {
 	int sum = 0;
+	int max = find_max_element_index(vector, length);
 
 	for (int i = 0; i < max; i++)
 	{
